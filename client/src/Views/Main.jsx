@@ -16,7 +16,6 @@ const Main = (props) => {
 
     return(
         <div>
-            <h1 className="head">Howdy from Main!</h1>
             {
                 bodies.map((item, i) => {
                     return <Planet item={item} key={i} />

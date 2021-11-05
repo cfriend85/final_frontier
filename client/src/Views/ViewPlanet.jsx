@@ -5,12 +5,22 @@ import Planet from '../Components/Planet';
 
 const ViewPlanet = (props) => {
 
-    const [planet, setPlanet] = useState({})
+    const [planet, setPlanet] = useState({});
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        axios.get(`https://api.le-systeme-solaire.net/rest/bodies/${props._id}`)
+            .then(res => {
+                setPlanet(res.data)
+                setLoaded(true)
+            })
+            .catch(err => console.log(err))
+    }, [loaded])
     
     return(
         <div>
-            <h1 className="head">Single Planet Page</h1>
-            <h3 className="head">Put planet component here</h3>
+            <h1 className="text-info">Single Planet Page</h1>
+            <Planet item={planet} />
         </div>
     )
 }

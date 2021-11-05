@@ -18,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={astroPic} alt="Astronomy pic of the day" />
+        <h1 className="text-light">The Final Frontier</h1>
+        <img src={astroPic} alt="Astronomy pic of the day"/>
       </header>
       <hr></hr>
     <Router>
