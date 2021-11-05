@@ -1,3 +1,6 @@
+body > #root > div {
+  height: 100vh;
+}
 .App {
   /* text-align: center; */
   background-color: #191919;
@@ -6,7 +9,20 @@
   repeating-linear-gradient( #00000055, #000000 );
 }
 
-.head{
-  text-align:left;
-  margin-left: 100px;
+.main-header{
+  height: 200px;
+  color:azure;
+  padding: 25px 0px 0px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pnet{
+  width: 150px;
+  height: 50px;
+  padding-left: 50px;
+}
+
+.btnHome{
+  
 }
