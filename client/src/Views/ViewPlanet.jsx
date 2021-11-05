@@ -7,11 +7,12 @@ const ViewPlanet = (props) => {
 
     const [planet, setPlanet] = useState({});
     const [loaded, setLoaded] = useState(false);
-
+    
     useEffect(() => {
         axios.get(`https://api.le-systeme-solaire.net/rest/bodies/${props._id}`)
             .then(res => {
                 setPlanet(res.data)
+                console.log(res.data)
                 setLoaded(true)
             })
             .catch(err => console.log(err))
@@ -19,9 +20,10 @@ const ViewPlanet = (props) => {
     
     return(
         <div>
+            <a href="/"><button className="mt-3 m-5 btn btn-lg btn-outline-secondary text-light border-3 btnHome">Home</button></a>
             <h1 className="text-info p-5">{planet.englishName} Info</h1>
-            <button className="mt-3 m-5 btn btn-lg btn-outline-secondary text-light border-3 btnHome">Home</button>
-
+            <h3 className="text-info p-5">{planet.englishName}'s Gravity: {planet.gravity}</h3>
+            <h3 className="text-info p-5">{planet.englishName}'s Average Temperature: {Math.round(planet.avgTemp - 273.15) * 9/5 + 32}° F</h3>
         </div>
     )
 }
