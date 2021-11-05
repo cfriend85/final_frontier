@@ -3,8 +3,8 @@ import { navigate } from '@reach/router';
 
 const Planet = (props) => {
     return (
-        <div className="d-flex justify-content-around flex-wrap p-3" onClick={() => navigate(`/${props.item.id}`)}>
-            <h1 className="text-light">{props.item.englishName}</h1>
+        <div className="d-flex pt-3 pb-3 p-5" onClick={() => navigate(`/${props.item.id}`)}>
+            <button className="btn btn-outline-secondary text-info btn-lg pnet">{props.item.englishName}</button>
         </div>
     )
 }

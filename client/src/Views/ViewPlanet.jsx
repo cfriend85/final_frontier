@@ -19,8 +19,9 @@ const ViewPlanet = (props) => {
     
     return(
         <div>
-            <h1 className="text-info">Single Planet Page</h1>
-            <Planet item={planet} />
+            <h1 className="text-info p-5">{planet.englishName} Info</h1>
+            <button className="mt-3 m-5 btn btn-lg btn-outline-secondary text-light border-3 btnHome">Home</button>
+
         </div>
     )
 }

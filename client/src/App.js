@@ -15,11 +15,11 @@ function App() {
       .then(res => setAstroPic(res.data.url))
       .catch(err => console.log(err))
   })
+
   return (
     <div className="App">
-      <header>
-        <h1 className="text-light">The Final Frontier</h1>
-        <img src={astroPic} alt="Astronomy pic of the day"/>
+      <header className="main-header" style={{backgroundImage: `url(${astroPic})`}}>
+        <h1>The Final Frontier</h1>
       </header>
       <hr></hr>
     <Router>
