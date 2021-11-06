@@ -1,5 +1,6 @@
 body > #root > div {
-  height: 150vh;
+  height: 110vh;
+  width: 205vh;
 }
 .App {
   /* text-align: center; */
@@ -17,8 +18,24 @@ body > #root > div {
   background-size: cover;
 }
 
+#title{
+  font-style: italic;
+  font-weight: bolder;
+}
+
 .pnet{
   width: 150px;
-  height: 50px;
-  padding-left: 50px;
+}
+
+.pnet:hover{
+  transform: scale(1.2);
+}
+
+#main-div{
+  display: flex;
+}
+
+#space-gif{
+  height: 785px;
+  width: 1625px;
 }

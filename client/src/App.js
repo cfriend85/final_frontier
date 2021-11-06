@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="main-header" style={{backgroundImage: `url(${astroPic})`}}>
-        <h1>The Final Frontier</h1>
+        <h1 id="title">The Final Frontier</h1>
       </header>
       <hr></hr>
     <Router>

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Planet from '../Components/Planet';
+import space from '../Images/space.gif';
 
 
 const Main = (props) => {
@@ -15,12 +16,17 @@ const Main = (props) => {
     }, [bodies])
 
     return(
-        <div>
+        <div id="main-div">
+            <aside>
             {
                 bodies.map((item, i) => {
                     return <Planet item={item} key={i} />
                 })
             }
+            </aside>
+            <div>
+            <img src={space} id="space-gif"></img>
+            </div>
         </div>
     )
 }
