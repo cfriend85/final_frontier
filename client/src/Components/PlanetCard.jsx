@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import Mars from '../Images/Mars.jpg'
 const PlanetCard = (props) => {
 
     const [planetPic, setPlanetPic] = useState("");
@@ -8,7 +9,12 @@ const PlanetCard = (props) => {
     useEffect(() => {
         axios.get(`https://images-api.nasa.gov/search?q=${props.planet.englishName}`)
             .then(res => {
-                setPlanetPic(res.data.collection.items[6].links[0].href)
+                if (props.planet.englishName == "Mars") {
+                    setPlanetPic(Mars)
+                }
+                else{
+                    setPlanetPic(res.data.collection.items[6].links[0].href)
+                }
                 setLoaded(true)
             })
             .catch(err => console.log(err))
