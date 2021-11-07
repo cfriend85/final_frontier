@@ -8,7 +8,7 @@ const PlanetCard = (props) => {
     useEffect(() => {
         axios.get(`https://images-api.nasa.gov/search?q=${props.planet.englishName}`)
             .then(res => {
-                setPlanetPic(res.data.collection.items[5].links[0].href)
+                setPlanetPic(res.data.collection.items[6].links[0].href)
                 setLoaded(true)
             })
             .catch(err => console.log(err))
