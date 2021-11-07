@@ -22,7 +22,7 @@ const PlanetCard = (props) => {
     
     return(
         <div>
-            <img src={planetPic} alt="" />
+            <img src={planetPic} alt={props.planet.englishName} />
             <p className="text-info text-decoration-underline">Cool facts about {props.planet.englishName == "Sun"? "The Sun" : props.planet.englishName}</p>
             <p className="text-info">{props.planet.englishName}'s Gravity: {props.planet.gravity}</p>
             <p className="text-info">{props.planet.englishName}'s Average Temperature: {Math.round(props.planet.avgTemp - 273.15) * 9/5 + 32}° F</p>
