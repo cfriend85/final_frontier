@@ -20,7 +20,7 @@ const Planet = (props) => {
     return (
         <div className="d-flex pt-3 pb-3 p-5" onClick={onClickHandler}>
             {clicked? <PlanetCard planet={currentPlanet} /> : 
-            <button className="btn btn-outline-secondary text-info btn-lg pnet" on>{props.item.englishName == "Sun"? "The Sun" : props.item.englishName}</button>}
+            <button className="btn btn-outline-secondary text-info btn-lg pnet">{props.item.englishName == "Sun"? "The Sun" : props.item.englishName}</button>}
         </div>
     )
 }
