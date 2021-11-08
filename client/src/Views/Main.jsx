@@ -7,7 +7,7 @@ import Planet from '../Components/Planet';
 const Main = (props) => {
 
     const [bodies, setBodies] = useState([]);
-
+    const [clickedPlanet, setClickedPlanet] = useState(-1);
     
     useEffect(() => {
         axios.get("https://api.le-systeme-solaire.net/rest.php/bodies?filter%5B%5D=id%2Ceq%2Curanus&filter%5B%5D=id%2Ceq%2Cneptune&filter%5B%5D=id%2Ceq%2Cmars&filter%5B%5D=id%2Ceq%2Cterre&filter%5B%5D=id%2Ceq%2Csoleil&filter%5B%5D=id%2Ceq%2Cmercure&filter%5B%5D=id%2Ceq%2Cvenus&filter%5B%5D=id%2Ceq%2Cpluton&filter%5B%5D=id%2Ceq%2Cjupiter&filter%5B%5D=id%2Ceq%2Csaturne&satisfy=any/")
@@ -28,12 +28,16 @@ const Main = (props) => {
             .catch(err => console.log(err))
     }, [bodies])
 
+    const onClickHandler = key => {
+        setClickedPlanet(key);
+    }
+
     return(
         <div id="main-div">
             <aside>
             {
                 bodies.map((item, i) => {
-                    return <Planet item={item} key={i} />
+                    return <Planet item={item} key={i} idx={i} activePlanet={clickedPlanet} onClickHandler={onClickHandler}/>
                 })
             }
             </aside>
