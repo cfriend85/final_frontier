@@ -38,7 +38,7 @@ const Main = (props) => {
             }
             </aside>
             <div>
-            <img src={props.astroPic} id="space-gif"></img>
+            <img src={props.astroPic} id="space-gif" alt="NASA Astronomy pic of the day"></img>
             </div>
         </div>
     )
