@@ -39,3 +39,11 @@ body > #root > div {
   height: 785px;
   width: 1625px;
 }
+
+.planetCard {
+  height: 350px;
+}
+
+.planetPic {
+  height: 200px;
+}
