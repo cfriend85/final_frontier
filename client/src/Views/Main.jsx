@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Planet from '../Components/Planet';
-import space from '../Images/space.gif';
 
 
 const Main = (props) => {
@@ -39,7 +38,7 @@ const Main = (props) => {
             }
             </aside>
             <div>
-            <img src={space} id="space-gif"></img>
+            <img src={props.astroPic} id="space-gif"></img>
             </div>
         </div>
     )

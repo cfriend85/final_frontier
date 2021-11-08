@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Space from './Images/space.gif'
 import Main from './Views/Main';
 
 import {Router} from '@reach/router';
@@ -18,12 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="main-header" style={{backgroundImage: `url(${astroPic})`}}>
+      <header className="main-header" style={{backgroundImage: `url(${Space})`}}>
         <h1 id="title">The Final Frontier</h1>
       </header>
       <hr></hr>
     <Router>
-      <Main path='/' />
+      <Main path='/' astroPic={astroPic}/>
     </Router>
     </div>
   );
