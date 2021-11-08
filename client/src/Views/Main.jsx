@@ -16,6 +16,7 @@ const Main = (props) => {
                 setBodies([
                     res.data.bodies[6],
                     res.data.bodies[2],
+                    res.data.bodies[9],
                     res.data.bodies[7],
                     res.data.bodies[1],
                     res.data.bodies[0],
