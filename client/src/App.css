@@ -1,9 +1,8 @@
 body > #root > div {
-  height: 430vh;
+  height: 425vh;
   width: 205vh;
 }
 .App {
-  /* text-align: center; */
   background-color: #191919;
   opacity: 0.9;
   background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #191919 4px ), 
@@ -11,7 +10,7 @@ body > #root > div {
 }
 
 .main-header{
-  height: 175px;
+  height: 100px;
   color:azure;
   padding: 25px 0px 0px 50px;
   background-repeat: no-repeat;
