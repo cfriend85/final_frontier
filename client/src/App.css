@@ -1,6 +1,7 @@
 body > #root > div {
-  height: 135vh;
-  width: 205vh;
+  height: 100vh;
+  /* width: 205vh; */
+  
 }
 .App {
   background-color: #191919;
@@ -23,20 +24,23 @@ body > #root > div {
 }
 
 .pnet{
-  width: 150px;
+  width: 110px;
+  display: inline;
+  
 }
 
 .pnet:hover{
   transform: scale(1.2);
 }
 
-#main-div{
-  display: flex;
-}
+/* .main-div{
 
-#space-gif{
-  height: 785px;
-  width: 1625px;
+} */
+
+.space-POD{
+  max-height: 1000px;
+  max-width: 1000px;
+  margin: 20px 0px 0px 300px;
 }
 
 .planetCard {

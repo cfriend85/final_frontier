@@ -33,17 +33,17 @@ const Main = (props) => {
     }
 
     return(
-        <div id="main-div">
-            <aside>
+        <div className="main-div">
+            <div className="pnetDiv d-flex">
             {
                 bodies.map((item, i) => {
                     return <Planet item={item} key={i} idx={i} activePlanet={clickedPlanet} onClickHandler={onClickHandler}/>
                 })
             }
-            </aside>
-            <div>
-            <img src={props.astroPic} id="space-gif" alt="NASA Astronomy pic of the day"></img>
             </div>
+            
+            <img src={props.astroPic} className="space-POD" alt="NASA Astronomy pic of the day"></img>
+            
         </div>
     )
 }
