@@ -3,6 +3,7 @@ import axios from 'axios';
 import Mars from '../Images/Mars.jpg'
 import Uranus from '../Images/Uranus.jpg'
 import Mercury from '../Images/Mercury.jpg'
+import Neptune from '../Images/neptune.jpg'
 const PlanetCard = (props) => {
 
     const [planetPic, setPlanetPic] = useState("");
@@ -18,6 +19,9 @@ const PlanetCard = (props) => {
                 }
                 else if(props.planet.englishName === "Mercury"){
                     setPlanetPic(Mercury)
+                }
+                else if(props.planet.englishName === "Neptune"){
+                    setPlanetPic(Neptune)
                 }
                 else{
                     setPlanetPic(res.data.collection.items[6].links[0].href)
