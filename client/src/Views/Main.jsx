@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import Planet from '../Components/Planet';
-
+import PlanetCard from '../Components/PlanetCard';
 
 const Main = (props) => {
 
@@ -40,6 +40,9 @@ const Main = (props) => {
                     return <Planet item={item} key={i} idx={i} activePlanet={clickedPlanet} onClickHandler={onClickHandler}/>
                 })
             }
+            </div>
+            <div>
+                {clickedPlanet >= 0? <PlanetCard planet={bodies[clickedPlanet]} /> : <p></p>}
             </div>
             <div className="space-POD d-flex">
             <img src={props.astroPic}  className="mx-auto center"alt="NASA Astronomy pic of the day"></img>
