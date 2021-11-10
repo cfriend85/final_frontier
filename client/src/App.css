@@ -27,15 +27,19 @@
 
 .pnet:hover{
   transform: scale(1.2);
+  
 }
 .pnetDiv{
   display: flex;
 }
 
+.spaceImg{
+  width:1500px;
+}
 
 .space-POD{
   display: flex;
-  margin-top: 25px; 
+  margin-top: 50px; 
 }
 
 .planetCard {
@@ -46,7 +50,8 @@
 }
 
 .planetPic {
-  height: 300px;
+  height: 350px;
+  min-width: 400px;
   width:fit-content;
 }
 

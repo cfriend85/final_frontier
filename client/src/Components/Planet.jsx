@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import PlanetCard from './PlanetCard';
+import StarGazer from '../Images/stargazing.png';
 
 const Planet = (props) => {
 

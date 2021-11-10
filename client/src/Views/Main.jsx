@@ -41,11 +41,11 @@ const Main = (props) => {
                 })
             }
             </div>
-            <div>
+            <div className="pb-5">
                 {clickedPlanet >= 0? <PlanetCard planet={bodies[clickedPlanet]} /> : <p></p>}
             </div>
             <div className="space-POD d-flex">
-            <img src={props.astroPic}  className="mx-auto center"alt="NASA Astronomy pic of the day"></img>
+            <img src={props.astroPic}  className="mx-auto center spaceImg"alt="NASA Astronomy pic of the day"></img>
             </div>
         </div>
     )
