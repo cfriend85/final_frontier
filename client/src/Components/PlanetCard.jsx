@@ -7,7 +7,8 @@ import Neptune from '../Images/neptune.jpg'
 const PlanetCard = (props) => {
 
     const [planetPic, setPlanetPic] = useState("");
-    
+    const [planet, setPlanet] = useState({});
+
     useEffect(() => {
         axios.get(`https://images-api.nasa.gov/search?q=${props.planet.englishName}`)
             .then(res => {
@@ -26,6 +27,8 @@ const PlanetCard = (props) => {
                 else{
                     setPlanetPic(res.data.collection.items[6].links[0].href)
                 }
+        axios.get(`https://api.le-systeme-solaire.net/rest/bodies/${props.planet.id}`)
+            .then(res => setPlanet(res.data))
             })
             .catch(err => console.log(err))
         }, [props.planet.englishName])
@@ -40,10 +43,10 @@ const PlanetCard = (props) => {
                 </div>
                 <hr className="my-2"></hr>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Gravity: {props.planet.gravity}</p>
-                <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Average Temperature: {Math.round(props.planet.avgTemp - 273.15) * 9/5 + 32}° F</p>
+                <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Average Temperature: {Math.round((planet.avgTemp - 273.15) * 9/5 + 32)}° F</p>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName} has {props.planet.moons? props.planet.moons.length : 0} moon(s)!</p>
                     <p className="d-flex flex-row-reverse">
-                        <a className="btn btn-outline-secondary text-warning btn-sml" href="#!" role="button">To extended infopage</a>
+                        <a className="btn btn-outline-secondary text-warning btn-sml" href="#!" role="button">Learn More</a>
                     </p>
             </div>   
         </div>
