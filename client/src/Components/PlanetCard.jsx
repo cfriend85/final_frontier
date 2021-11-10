@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Link } from "@reach/router";
 import Mars from '../Images/Mars.jpg'
 import Uranus from '../Images/Uranus.jpg'
 import Mercury from '../Images/Mercury.jpg'
@@ -46,7 +47,7 @@ const PlanetCard = (props) => {
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Average Temperature: {Math.round((planet.avgTemp - 273.15) * 9/5 + 32)}° F</p>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName} has {props.planet.moons? props.planet.moons.length : 0} moon(s)!</p>
                     <p className="d-flex flex-row-reverse">
-                        <a className="btn btn-outline-secondary text-warning btn-sml" href="#!" role="button">Learn More</a>
+                        <Link className="btn btn-outline-secondary text-warning btn-sml" to={`/view/${planet.id}`}>Learn More</Link>
                     </p>
             </div>   
         </div>
