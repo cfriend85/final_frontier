@@ -33,17 +33,17 @@ const Main = (props) => {
     }
 
     return(
-        <div className="main-div">
-            <div className="pnetDiv d-flex">
+        <div>{/*this needs to be centered */}
+            <div className="pnetDiv">
             {
                 bodies.map((item, i) => {
                     return <Planet item={item} key={i} idx={i} activePlanet={clickedPlanet} onClickHandler={onClickHandler}/>
                 })
             }
             </div>
-            
-            <img src={props.astroPic} className="space-POD" alt="NASA Astronomy pic of the day"></img>
-            
+            <div className="space-POD d-flex">
+            <img src={props.astroPic}  className="mx-auto center"alt="NASA Astronomy pic of the day"></img>
+            </div>
         </div>
     )
 }

@@ -17,10 +17,12 @@ const Planet = (props) => {
     };
 
     return (
-        <div className="pt-3 pb-3 p-4" onClick={onClickedHandler}>
+        <div className="pt-3 pb-3 p-4 mx-auto center" onClick={onClickedHandler}>
             <button className="btn btn-outline-secondary text-info btn-lg pnet">{props.item.englishName === "Sun"? "The Sun" : props.item.englishName}</button>
             <hr></hr>
-            {props.activePlanet === props.idx ? <PlanetCard planet={currentPlanet} /> : <p></p>}
+            <div>
+                {props.activePlanet === props.idx ? <PlanetCard planet={currentPlanet} /> : <p></p>}
+            </div>
         </div>
     )
 }
