@@ -11,10 +11,14 @@ import axios from 'axios';
 function App() {
 
   const [astroPic, setAstroPic] = useState("")
-
+  const [title, setTitle] = useState("")
+  
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=FlQBmLo1DxKWl57BFKDw5KNCsvighqJTgBWfeKJR`)
-      .then(res => setAstroPic(res.data.url))
+      .then(res => {
+        setAstroPic(res.data.url)
+        setTitle(res.data.title)
+      })
       .catch(err => console.log(err))
   })
 
@@ -25,7 +29,7 @@ function App() {
       </header>
       <hr></hr>
     <Router>
-      <Main path='/' astroPic={astroPic}/>
+      <Main path='/' astroPic={astroPic} title={title}/>
       <LearnMore path='/view/:_id' />
     </Router>
     </div>

@@ -27,7 +27,6 @@
 
 .pnet:hover{
   transform: scale(1.2);
-  
 }
 .pnetDiv{
   display: flex;
@@ -40,6 +39,10 @@
 .space-POD{
   display: flex;
   margin-top: 50px; 
+}
+
+.space-POD-title{
+  text-align: center;
 }
 
 .planetCard {

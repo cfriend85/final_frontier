@@ -44,6 +44,7 @@ const Main = (props) => {
             <div className="pb-5">
                 {clickedPlanet >= 0? <PlanetCard planet={bodies[clickedPlanet]} /> : <p></p>}
             </div>
+            <h5 className="text-danger font-weight-bolder space-POD-title">{props.title}</h5><br></br>
             <div className="space-POD d-flex">
             <img src={props.astroPic}  className="mx-auto center spaceImg"alt="NASA Astronomy pic of the day"></img>
             </div>
