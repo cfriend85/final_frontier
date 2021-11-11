@@ -39,7 +39,9 @@ const LearnMore = (props) => {
             <div className="p-3 d-flex flex-wrap">
             {
                 moons?.map((item, i) => {
-                    return <h5 key={i} className="allMoons">{`${item.moon},`}</h5>
+                    // return <h5 key={i} className="allMoons">{`${item.moon},`}</h5>
+                    // return <h5 key={i} className="allMoons">{i === `${moons.length}`? `${item.moon}` : `${item.moon},`}</h5>
+                    return <h5 key={i} className="allMoons">{i == moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
                 })
             }
             </div>
