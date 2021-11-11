@@ -6,7 +6,7 @@ const LearnMore = (props) => {
     const [currentPlanet, setCurrentPlanet] = useState({});
     const [moons, setMoons] = useState([]);
     const [planetPic, setPlanetPic] = useState("")
-    let [planetIndex, setPlanetIndex] = useState(-1)
+    let [planetIndex, setPlanetIndex] = useState(98)
 
     useEffect(() => {
         axios.get(`https://api.le-systeme-solaire.net/rest/bodies/${props._id}`)
@@ -19,7 +19,14 @@ const LearnMore = (props) => {
 
     const onClickHandler = (event) => {
         event.preventDefault();
-        setPlanetIndex(planetIndex += 1)
+        if (planetIndex == 98) {
+            console.log(planetIndex)
+            setPlanetIndex(-1)
+        }
+        else{
+            setPlanetIndex(planetIndex += 1)
+            console.log(planetIndex)
+        }
         axios.get(`https://images-api.nasa.gov/search?q=${currentPlanet.englishName}`)
             .then(res => setPlanetPic(res.data.collection.items[planetIndex].links[0].href))
             .catch(err => console.log(err))
@@ -34,7 +41,11 @@ const LearnMore = (props) => {
                     return <p key={i}>{item.moon}</p>
                 })
             }
-
+            <h3>Axial Tilt: {currentPlanet.axialTilt}</h3>
+            <h3>Density: {currentPlanet.density}</h3>
+            <h3>Sideral Orbit: {currentPlanet.sideralOrbit}</h3>
+            <h3>Sideral Rotation: {currentPlanet.sideralRotation}</h3>
+            <h3>Eccentricity: {currentPlanet.eccentricity}</h3>
             <button className="btn btn-warning" onClick={onClickHandler}>Map Images</button>
             {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
         </div>
