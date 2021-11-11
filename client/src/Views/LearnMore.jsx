@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from '@reach/router'
 import axios from 'axios';
 
 const LearnMore = (props) => {
@@ -39,8 +40,6 @@ const LearnMore = (props) => {
             <div className="p-3 d-flex flex-wrap">
             {
                 moons?.map((item, i) => {
-                    // return <h5 key={i} className="allMoons">{`${item.moon},`}</h5>
-                    // return <h5 key={i} className="allMoons">{i === `${moons.length}`? `${item.moon}` : `${item.moon},`}</h5>
                     return <h5 key={i} className="allMoons">{i == moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
                 })
             }
@@ -51,6 +50,7 @@ const LearnMore = (props) => {
                 <h3>Sideral Orbit: {currentPlanet.sideralOrbit}</h3>
                 <h3>Sideral Rotation: {currentPlanet.sideralRotation}</h3>
                 <h3>Eccentricity: {currentPlanet.eccentricity}</h3>
+                <Link to="/" className="btn btn-danger">Home Page</Link><br></br>
                 <button className="btn btn-warning" onClick={onClickHandler}>Map Images</button>
                 {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
             </div>
