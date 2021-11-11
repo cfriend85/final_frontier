@@ -13,7 +13,7 @@ function App() {
   const [astroPic, setAstroPic] = useState("")
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=FlQBmLo1DxKWl57BFKDw5KNCsvighqJTgBWfeKJR&date=2021-05-15`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=FlQBmLo1DxKWl57BFKDw5KNCsvighqJTgBWfeKJR`)
       .then(res => setAstroPic(res.data.url))
       .catch(err => console.log(err))
   })

@@ -78,6 +78,11 @@
   content: "Next ";
 }
 
+.imageSizing{
+  max-width: 800px;
+  max-height: 600px;
+}
+
 body > #root > div {
   height: 100vh;
   overflow: auto;

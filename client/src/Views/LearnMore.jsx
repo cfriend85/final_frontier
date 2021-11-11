@@ -73,7 +73,7 @@ const LearnMore = (props) => {
                     <button className="btn btn-warning m-3" onClick={onClickHandler} id="keepClicking">Image</button>
                 </div>
                 <hr></hr>
-                {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
+                {planetPic? <img className="imageSizing" src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
             </div>
         </div>
     )
