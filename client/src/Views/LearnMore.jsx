@@ -33,21 +33,25 @@ const LearnMore = (props) => {
     }
 
     return(
-        <div>
-            <h1>Learn More page</h1>
-            <h1>{currentPlanet.englishName}</h1>
+        <div className="lMore">
+            <h1 className="text-warning p-3">More About {currentPlanet.englishName}</h1>
+            <h2 className="text-info p-3">Moons ({currentPlanet.moons? currentPlanet.moons.length : 0}):</h2>
+            <div className="p-3 d-flex flex-wrap">
             {
                 moons?.map((item, i) => {
-                    return <p key={i}>{item.moon}</p>
+                    return <h5 key={i} className="allMoons">{`${item.moon},`}</h5>
                 })
             }
-            <h3>Axial Tilt: {currentPlanet.axialTilt}</h3>
-            <h3>Density: {currentPlanet.density}</h3>
-            <h3>Sideral Orbit: {currentPlanet.sideralOrbit}</h3>
-            <h3>Sideral Rotation: {currentPlanet.sideralRotation}</h3>
-            <h3>Eccentricity: {currentPlanet.eccentricity}</h3>
-            <button className="btn btn-warning" onClick={onClickHandler}>Map Images</button>
-            {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
+            </div>
+            <div className="">
+                <h3>Axial Tilt: {currentPlanet.axialTilt}</h3>
+                <h3>Density: {currentPlanet.density}</h3>
+                <h3>Sideral Orbit: {currentPlanet.sideralOrbit}</h3>
+                <h3>Sideral Rotation: {currentPlanet.sideralRotation}</h3>
+                <h3>Eccentricity: {currentPlanet.eccentricity}</h3>
+                <button className="btn btn-warning" onClick={onClickHandler}>Map Images</button>
+                {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
+            </div>
         </div>
     )
 }

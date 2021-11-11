@@ -55,6 +55,15 @@
   width:fit-content;
 }
 
+.lMore{
+  color:white;
+
+}
+
+.allMoons{
+  margin-left: 5px;
+}
+
 body > #root > div {
   height: 100vh;
   overflow: auto;
