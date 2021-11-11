@@ -35,23 +35,44 @@ const LearnMore = (props) => {
 
     return(
         <div className="lMore">
-            <h1 className="text-warning p-3">More About {currentPlanet.englishName}</h1>
-            <h2 className="text-info p-3">Moons ({currentPlanet.moons? currentPlanet.moons.length : 0}):</h2>
-            <div className="p-3 d-flex flex-wrap">
-            {
-                moons?.map((item, i) => {
-                    return <h5 key={i} className="allMoons">{i == moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
-                })
-            }
-            </div>
-            <div className="">
-                <h3>Axial Tilt: {currentPlanet.axialTilt}</h3>
-                <h3>Density: {currentPlanet.density}</h3>
-                <h3>Sideral Orbit: {currentPlanet.sideralOrbit}</h3>
-                <h3>Sideral Rotation: {currentPlanet.sideralRotation}</h3>
-                <h3>Eccentricity: {currentPlanet.eccentricity}</h3>
-                <Link to="/" className="btn btn-danger">Home Page</Link><br></br>
-                <button className="btn btn-warning" onClick={onClickHandler}>Map Images</button>
+            <h1 className="text-warning p-3">More About {currentPlanet.englishName === "Sun"? "The Sun" : currentPlanet.englishName}</h1>
+            <div >
+                <h2 className="text-info p-3">Moons ({currentPlanet.moons? currentPlanet.moons.length : 0}):</h2>
+                <div className="p-3 d-flex flex-wrap">
+                {
+                    moons?.map((item, i) => {
+                        return <h5 key={i} className="allMoons">{i == moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
+                    })
+                }
+                </div>
+            </div>    
+            
+            <table className="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Axial Tilt:</th>
+                        <th>Density:</th>
+                        <th>Yearly Orbit (in days) :</th>
+                        <th>Plantary Rotation (in hours) :</th>
+                        <th>Eccentricity (orbital variance):</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className="table-warning text-secondary">
+                        <th>{currentPlanet.axialTilt}</th>
+                        <th>{currentPlanet.density}</th>
+                        <th>{currentPlanet.sideralOrbit}</th>
+                        <th>{currentPlanet.sideralRotation}</th>
+                        <th>{currentPlanet.eccentricity}</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div className="bInfoPage">
+                <div className="m-3 d-flex hPandImgBtn">
+                    <Link to="/" className="btn btn-danger m-3 ">Home Page</Link>
+                    <button className="btn btn-warning m-3" onClick={onClickHandler} id="keepClicking">Image</button>
+                </div>
+                <hr></hr>
                 {planetPic? <img src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
             </div>
         </div>

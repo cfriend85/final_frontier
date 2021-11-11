@@ -64,6 +64,20 @@
   margin-left: 5px;
 }
 
+.bInfoPage{
+  text-align: center;
+  
+}
+
+.hPandImgBtn{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+#keepClicking:hover::before{
+  content: "Next ";
+}
+
 body > #root > div {
   height: 100vh;
   overflow: auto;
