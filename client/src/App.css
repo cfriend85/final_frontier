@@ -27,6 +27,7 @@
 
 .pnet:hover{
   transform: scale(1.2);
+  cursor: url(./Images/telescope3.png), auto;
 }
 .pnetDiv{
   display: flex;
