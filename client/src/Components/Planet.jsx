@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
 const Planet = (props) => {
 
     const onClickedHandler = (event) => {
