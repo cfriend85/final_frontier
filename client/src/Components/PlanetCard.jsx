@@ -58,7 +58,7 @@ const PlanetCard = (props) => {
     return(
         <div className="planetCard mx-auto center"> 
             <div className="jumbotron mx-auto center">
-                <h3 className="display-3 text-warning">Cool facts about {props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}</h3>
+                <h3 className="display-3 text-warning">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Astrological Data</h3>
                 <hr className="my-2"></hr>
                 <div className="d-flex">   
                     <img src={planetPic} alt={props.planet.englishName} className="planetPic mx-auto center"/>
