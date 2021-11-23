@@ -6,3 +6,15 @@ planet with basic details.
 
 Learn more button on the PlanetCard will take you to the advanced details page which shows advanced astronomical data as well as calls on NASA images API to populate images
 gallery for current planet
+
+Main Component
+
+https://github.com/cfriend85/final_frontier/blob/master/demo/Main.gif
+
+PlanetCard Component
+
+https://github.com/cfriend85/final_frontier/blob/master/demo/PlanetCard.gif
+
+LearnMore Component
+
+https://github.com/cfriend85/final_frontier/blob/master/demo/LearnMore.gif
