@@ -1,4 +1,5 @@
 Single page rendered App through Main component displaying Planet component for each planet in our solar system acquired through calling the Solar System Open Data API and filtering for just our planets and sets state. Main component also calls NASA picture of the day API and populates new image every day. On hover of each planet button, cursor changes to Telescope icon insinuating there’s more to see and prompt click. The PlanetCard component renders on click of Planet component and data changes with state with no page refresh showing basic astrological data as well as GIF of current clicked planet. Optional “Learn More” button on PlanetCard links to another page showing additional data for clicked planet including NASA API call for 100 images for the current clicked planet. Styled using Bootstrap 4.
+
 Main Component
 
 https://github.com/cfriend85/final_frontier/blob/master/demo/Main.gif
