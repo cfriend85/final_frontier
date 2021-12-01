@@ -24,14 +24,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="main-header" style={{backgroundImage: `url(${Space})`}}>
+      <header className="mainAppHeader" style={{backgroundImage: `url(${Space})`}}>
         <h1 id="title">The Final Frontier</h1>
       </header>
       <hr></hr>
-    <Router>
-      <Main path='/' astroPic={astroPic} title={title}/>
-      <LearnMore path='/view/:_id' />
-    </Router>
+      <Router>
+        <Main path='/' astroPic={astroPic} title={title}/>
+        <LearnMore path='/view/:_id' />
+      </Router>
     </div>
   );
 }

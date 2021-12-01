@@ -34,14 +34,14 @@ const LearnMore = (props) => {
     }
 
     return(
-        <div className="lMore">
+        <div className="learnMoreContainer">
             <h1 className="text-warning p-3">More About {currentPlanet.englishName === "Sun"? "The Sun" : currentPlanet.englishName}</h1>
             <div >
                 <h2 className="text-info p-3">Moons ({currentPlanet.moons? currentPlanet.moons.length : 0}):</h2>
                 <div className="p-3 d-flex flex-wrap">
                 {
                     moons?.map((item, i) => {
-                        return <h5 key={i} className="allMoons">{i === moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
+                        return <h5 key={i} className="allMoonsDisplay">{i === moons.length-1? `${item.moon}` : `${item.moon}, `}</h5>
                     })
                 }
                 </div>
@@ -67,11 +67,11 @@ const LearnMore = (props) => {
                     </tr>
                 </tbody>
             </table>
-            <div className="bInfoPage">
-                <div className="m-3 d-flex hPandImgBtn">
+            <div className="InfoPageFooter">
+                <navbar className="m-3 d-flex homePageImageNavbar">
                     <Link to="/" className="btn btn-danger m-3 ">Home Page</Link>
-                    <button className="btn btn-warning m-3" onClick={onClickHandler} id="keepClicking">Image</button>
-                </div>
+                    <button className="btn btn-warning m-3 learnMoreImageButton" onClick={onClickHandler} id="NextImage">Image</button>
+                </navbar>
                 <hr></hr>
                 {planetPic? <img className="imageSizing" src={planetPic} alt={currentPlanet.englishName}/> : <p></p>}
             </div>

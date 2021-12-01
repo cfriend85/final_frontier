@@ -6,7 +6,7 @@
   repeating-linear-gradient( #00000055, #000000 );
 }
 
-.main-header{
+.mainAppHeader{
   height: 100px;
   color:azure;
   padding: 25px 0px 0px 50px;
@@ -19,31 +19,30 @@
   font-weight: bolder;
 }
 
-.pnet{
+.planetButton{
   width: 110px;
-  display: inline;
-  
+  display: inline
 }
 
-.pnet:hover{
+.planetButton:hover{
   transform: scale(1.2);
   cursor: url(./Images/telescope3.png), auto;
 }
 
-.pnetDiv{
+.planetButtonContainer{
   display: flex;
 }
 
-.spaceImg{
-  width:1500px;
+.spaceImageSizing{
+  width:1500px;  
 }
 
-.space-POD{
+.positioningAstroPic{
   display: flex;
   margin-top: 50px; 
 }
 
-.space-POD-title{
+.titleAstroPic{
   text-align: center;
 }
 
@@ -60,27 +59,31 @@
   width:fit-content;
 }
 
-.lMore{
+.learnMoreContainer{
   color:white;
 
 }
 
-.allMoons{
+.allMoonsDisplay{
   margin-left: 5px;
 }
 
-.bInfoPage{
+.InfoPageFooter{
   text-align: center;
   
 }
 
-.hPandImgBtn{
+.homePageImageNavbar{
   display:flex;
   justify-content: space-evenly;
 }
 
-#keepClicking:hover::before{
+#NextImage:hover::before{
   content: "Next ";
+}
+
+.learnMoreImageButton{
+  width: 110px;
 }
 
 .imageSizing{

@@ -60,16 +60,16 @@ const PlanetCard = (props) => {
             <div className="jumbotron mx-auto center">
                 <h3 className="display-3 text-warning">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Astrological Data</h3>
                 <hr className="my-2"></hr>
-                <div className="d-flex">   
+                <span className="d-flex">   
                     <img src={planetPic} alt={props.planet.englishName} className="planetPic mx-auto center"/>
-                </div>
+                </span>
                 <hr className="my-2"></hr>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Gravity: {props.planet.gravity}</p>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName}'s Average Temperature: {Math.round((planet.avgTemp - 273.15) * 9/5 + 32)}° F</p>
                 <p className="text-info">{props.planet.englishName === "Sun"? "The Sun" : props.planet.englishName} has {props.planet.moons? props.planet.moons.length : 0} moon(s)!</p>
-                    <p className="d-flex flex-row-reverse">
-                        <Link className="btn btn-outline-secondary text-warning btn-sml" to={`/view/${planet.id}`}>Learn More</Link>
-                    </p>
+                    <span className="d-flex flex-row-reverse">
+                        <Link to={`/view/${planet.id}`}><button className="btn btn-outline-secondary text-warning btn-sml">Learn More</button></Link>
+                    </span>
             </div>   
         </div>
     )
